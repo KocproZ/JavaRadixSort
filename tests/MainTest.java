@@ -28,15 +28,33 @@ public class MainTest {
 
     @Test
     public void sortTest() {
-        int[] outputList = Main.sort(Arrays.copyOf(inputList, cases));
+        beforeClass();
+        long startTime = System.currentTimeMillis();
+        int[] outputList = Main.radixSort(Arrays.copyOf(inputList, cases));
+        long endTime = System.currentTimeMillis();
+        System.out.println("Radix sort took " + (endTime-startTime) + "ms");
+
+        startTime = System.currentTimeMillis();
         Arrays.sort(expected);
+        endTime = System.currentTimeMillis();
+        System.out.println("Arrays.sort() took " + (endTime-startTime) + "ms");
+
         assertArrayEquals(expected, outputList);
     }
 
     @Test
     public void sortBinaryTest() {
-        int[] outputList = Main.sortBinary(Arrays.copyOf(inputList, cases));
+        beforeClass();
+        long startTime = System.currentTimeMillis();
+        int[] outputList = Main.radixSortBinary(Arrays.copyOf(inputList, cases));
+        long endTime = System.currentTimeMillis();
+        System.out.println("Binary radix sort took " + (endTime-startTime) + "ms");
+
+        startTime = System.currentTimeMillis();
         Arrays.sort(expected);
+        endTime = System.currentTimeMillis();
+        System.out.println("Arrays.sort() took " + (endTime-startTime) + "ms");
+
         assertArrayEquals(expected, outputList);
     }
 

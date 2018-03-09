@@ -21,12 +21,12 @@ public class Main {
 
     }
 
-    public static int[] sort(int[] inputList) {
+    public static int[] radixSort(int[] inputList) {
         int[] numbersList = new int[10];
         int[] outputList = new int[inputList.length];
         int digitBuffer;
 
-        for (int j = 1; j < new String("" + Integer.MAX_VALUE).length(); j++) {
+        for (int j = 1; j < ("" + Integer.MAX_VALUE).length(); j++) {
             for (int i = 0; i < inputList.length; i++) {
                 numbersList[getDigit(inputList[i], j)]++;
             }
@@ -46,7 +46,7 @@ public class Main {
         return outputList;
     }
 
-    public static int[] sortBinary(int[] inputList) {
+    public static int[] radixSortBinary(int[] inputList) {
         int[] numbersList = new int[2];
         int[] outputList = new int[inputList.length];
         int digitBuffer;
