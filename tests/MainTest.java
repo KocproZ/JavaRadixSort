@@ -1,6 +1,6 @@
 import org.junit.BeforeClass;
 import org.junit.Test;
-import pl.kocproz.fx.Main;
+import pl.kocproz.radix.Main;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -9,7 +9,7 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by kacper on 6/17/17.
+ * Created by KocproZ on 6/17/17.
  */
 public class MainTest {
 

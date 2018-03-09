@@ -1,4 +1,4 @@
-package pl.kocproz.fx;
+package pl.kocproz.radix;
 
 import java.util.Arrays;
 
